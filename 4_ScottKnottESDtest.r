@@ -1,0 +1,25 @@
+library("ScottKnottESD")
+metrics_26_universal = c('LCOM1', 'LCOM2', 'LCOM3', 'LCOM5', 'NewLCOM5', 'ICH', 'CAMC', 'NHD', 'SNHD', 'OCAIC', 'OCMIC', 'OMMIC', 'CBO', 'DAC', 'ICP', 'MPC', 'NIHICP', 'RFC', 'NMA', "NA", "NAIMP", "NM", "NMIMP", "NumPara", "SLOC", "stms")
+print(getwd())
+setwd("F:\\MTmeta\\ScottKnottTest\\gm_test\\gm_plot_for_metrics\\")
+print(getwd())
+for (metric in metrics_26_universal) {
+  print(metric)
+  data_metric = read.table(paste("F:\\MTmeta\\ScottKnottTest\\gm\\", metric, "_five_and_universal_threshold_gm.csv", sep=""), header = TRUE, sep = ",")
+  #print(data_metric)
+  sk_metric <- sk_esd(data_metric)
+  png(filename = paste(metric, "_ScottKnottESD.jpg", sep=""))
+  plot(sk_metric, main = paste(metric, "'s means of GM values on testing data", sep=""), ylab = paste("Means of GM values", sep=""), xlab = paste("Thresholds derived from five methods and the universal threshold", sep=""))
+  dev.off()
+  #print(sk_metric$groups[3])
+  write.table(t(c(metric, sk_metric$groups)), file = paste("F:\\MTmeta\\ScottKnottTest\\gm_test\\groups_five_and_universal_threshold_gm.csv", sep=""), append = TRUE, ,sep=',', row.names = FALSE)
+  #break
+}
+
+setwd("F:\\MTmeta\\ScottKnottTest\\gm_test\\")
+print(getwd())
+data_dimension = read.table("F:\\MTmeta\\ScottKnottTest\\gm_test\\dimension.csv", header = TRUE, sep = ",")
+sk_dimension <- sk_esd(data_dimension)
+png(filename = paste("dimension_ScottKnottESD.jpg", sep=""))
+plot(sk_dimension, main = paste("Dimension's means of GM values on testing data", sep=""), ylab = paste("Means of GM values", sep=""), xlab = paste("The universal threshold of four dimension", sep=""))
+dev.off()
