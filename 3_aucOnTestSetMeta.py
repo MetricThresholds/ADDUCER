@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # encoding:utf-8
 """
-Author : Yuanqing Mei
 Date : 2022/1/8
 Time: 23:30
 File: 6_aucOnTestSetMeta.py
-HomePage : https://github.com/meiyuanqing
-Email : dg1533019@smail.nju.edu.cn
 
 Does the random meta-analysis for AUC on testing data, including the trim and fill method to sensitive analysis.
 
