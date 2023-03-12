@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding:utf-8
 """
-Author : Yuanqing Mei
 Date : 2021/12/13
 Time: 23:14
 File: 2_pearson_meta.py
