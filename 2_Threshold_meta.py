@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # encoding:utf-8
 """
-Author : Yuanqing Mei
 Date : 2022/1/6
 Time: 23:06
 File: 4_staticThreshold_meta.py
-HomePage : https://github.com/meiyuanqing
-Email : dg1533019@smail.nju.edu.cn
 
 Deriving Pooled (methods) thresholds by meta-analysis (including sensitivity analysis).
 
