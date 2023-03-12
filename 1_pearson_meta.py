@@ -5,8 +5,6 @@ Author : Yuanqing Mei
 Date : 2021/12/13
 Time: 23:14
 File: 2_pearson_meta.py
-HomePage : https://github.com/meiyuanqing
-Email : dg1533019@smail.nju.edu.cn
 
 This procedure finish the following 2 assignments:
 (1) Gets the effective size and it's variance for Pearson, then for meta-analysis.
