@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding:utf-8
 """
-Author : Yuanqing Mei
 Date : 2021/9/26
 Time: 19:46
 File: defect_data.py
